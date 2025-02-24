@@ -44,7 +44,15 @@ $ java -jar ngrinder-controller-3.5.9-p1.war
 # agent
 $ run_agent.sh
 ```
+```bash
+# scale out
+# sudo docker compose up -d --scale web1=3
+```
 
+```bash
+$ sudo docker exec -it <LB_NAME> bash
+$ nginx -s reload
+```
 
 
 
