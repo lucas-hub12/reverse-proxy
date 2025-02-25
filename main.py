@@ -1,7 +1,7 @@
 from typing import Union
-
 from fastapi import FastAPI
-
+import time
+import random
 app = FastAPI()
 
 
@@ -32,25 +32,25 @@ def two_dimensional_array():
 
     return {"result": result}
 
-from fastapi import FastAPI
-import time
-import random
-
 @app.get("/add-large-arrays")
 def add_large_arrays():
     N = 10**6  # 100만 개 요소
 
     # Python 리스트로 랜덤한 1차원 배열 생성
+    start_creation_time = time.time()
     list_a = [random.randint(0, 100) for _ in range(N)]
     list_b = [random.randint(0, 100) for _ in range(N)]
+    end_creation_time = time.time()
 
     # 실행 시간 측정 (리스트 컴프리헨션 사용)
-    start_time = time.time()
-    result1 = [list_a[i] + list_b[i] for i in range(N)]
-    
-    end_time = time.time()
+    add_start_time = time.time()
+    result = [list_a[i] + list_b[i] for i in range(N)]
+    add_end_time = time.time()
 
-    return {"execution_time": end_time - start_time}
+    return {
+        "array_creation_time": end_creation_time - start_creation_time,
+        "execution_time": add_end_time - add_start_time
+        }
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
