@@ -56,9 +56,11 @@ $ nginx -s reload
 ## FastAPI
 ```bash
 $ fastapi main.py
-
-
-
+```
+## PDM to requirements.txt
+```bash
+$ pdm export -o requirements.txt --without-hashes
+```
 
 
 
