@@ -72,9 +72,11 @@ def two_dimensional_array():
 #         "addition_time": add_end_time - add_start_time
 #         }
 
+# 상수
+N = 10**4
+
 @app.get("/add-large-arrays")
 def add_large_arrays():
-    N = 10**6  # 100만 개 요소
     array_creation_time, addition_time = add_arrays(N, gen_r_array_randint)
     return {
         "array_creation_time": array_creation_time,
@@ -83,7 +85,6 @@ def add_large_arrays():
     
 @app.get("/add-large-arrays-choices")
 def add_large_arrays_choices():
-    N = 10**6  # 100만 개 요소
     array_creation_time, addition_time = add_arrays(N, gen_r_array_choices)
     return {
         "array_creation_time": array_creation_time,
@@ -128,3 +129,5 @@ def gen_r_array_choices(N):
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+
+
