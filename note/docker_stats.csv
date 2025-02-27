@@ -1,0 +1,21 @@
+Timestamp,Container,Name,ID,CPUPerc,MemUsage,MemPerc,NetIO,BlockIO,PIDs
+1740622436,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.06%,"262.6MiB / 15.48GiB",1.66%,"309kB / 3.75MB","0B / 0B",32
+1740622436,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.53%,"730.7MiB / 15.48GiB",4.61%,"3.75MB / 308kB","0B / 0B",225
+1740622448,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.07%,"262.6MiB / 15.48GiB",1.66%,"310kB / 3.76MB","0B / 0B",32
+1740622448,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.38%,"731.1MiB / 15.48GiB",4.61%,"3.76MB / 309kB","0B / 0B",225
+1740622462,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.08%,"262.6MiB / 15.48GiB",1.66%,"311kB / 3.77MB","0B / 0B",32
+1740622462,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.38%,"732MiB / 15.48GiB",4.62%,"3.77MB / 310kB","0B / 0B",225
+1740622474,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.07%,"262.6MiB / 15.48GiB",1.66%,"312kB / 3.78MB","0B / 0B",32
+1740622474,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.37%,"732.6MiB / 15.48GiB",4.62%,"3.78MB / 311kB","0B / 0B",225
+1740622487,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.05%,"262.5MiB / 15.48GiB",1.66%,"313kB / 3.79MB","0B / 0B",32
+1740622487,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.45%,"733.4MiB / 15.48GiB",4.63%,"3.79MB / 312kB","0B / 0B",225
+1740622501,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.06%,"262.5MiB / 15.48GiB",1.66%,"313kB / 3.8MB","0B / 0B",32
+1740622501,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.40%,"734.5MiB / 15.48GiB",4.63%,"3.8MB / 313kB","0B / 0B",225
+1740622513,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.07%,"262.5MiB / 15.48GiB",1.66%,"314kB / 3.81MB","0B / 0B",32
+1740622513,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.38%,"735.3MiB / 15.48GiB",4.64%,"3.81MB / 313kB","0B / 0B",225
+1740622527,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.08%,"262.6MiB / 15.48GiB",1.66%,"315kB / 3.82MB","0B / 0B",32
+1740622527,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.46%,"736.1MiB / 15.48GiB",4.64%,"3.82MB / 314kB","0B / 0B",225
+1740622540,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.07%,"262.5MiB / 15.48GiB",1.66%,"316kB / 3.83MB","0B / 0B",32
+1740622540,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.43%,"737MiB / 15.48GiB",4.65%,"3.83MB / 315kB","0B / 0B",225
+1740622552,6acec2d9b5e1,reverse-proxy-agent-1,6acec2d9b5e1,0.07%,"262.5MiB / 15.48GiB",1.66%,"317kB / 3.84MB","0B / 0B",32
+1740622552,b3beabe2910e,reverse-proxy-controller-1,b3beabe2910e,0.57%,"737.7MiB / 15.48GiB",4.65%,"3.84MB / 316kB","0B / 0B",225
