@@ -6,6 +6,8 @@ import numpy  as np
 
 app = FastAPI()
 
+N = 10**4
+
 @app.get("/")
 def read_root():
     a = [1, 2, 3, 4]
@@ -32,49 +34,6 @@ def two_dimensional_array():
     result=[[a[i][j] + b[i][j] for j in range(len(a[0]))]for i in range(len(a))]
 
     return {"result": result}
-
-# @app.get("/add-large-arrays")
-# def add_large_arrays():
-#     N = 10**6  # 100만 개 요소
-
-#     # Python 리스트로 랜덤한 1차원 배열 생성
-#     start_creation_time = time.time()
-#     list_a = [random.randint(0, 100) for _ in range(N)]
-#     list_b = [random.randint(0, 100) for _ in range(N)]
-#     end_creation_time = time.time()
-
-#     # 실행 시간 측정 (리스트 컴프리헨션 사용)
-#     add_start_time = time.time()
-#     result = [list_a[i] + list_b[i] for i in range(N)]
-#     add_end_time = time.time()
-
-#     return {
-#         "array_creation_time": end_creation_time - start_creation_time,
-#         "addition_time": add_end_time - add_start_time
-#         }
-
-# @app.get("/add-large-arrays-choices")
-# def add_large_arrays_choices():
-#     N = 10**6  # 100만 개 요소
-
-#     # Python 리스트로 랜덤한 1차원 배열 생성
-#     start_creation_time = time.time()
-#     list_a = [random.choice(range(101)) for _ in range(N)]
-#     list_b = [random.choice(range(101)) for _ in range(N)]
-#     end_creation_time = time.time()
-
-#     # 실행 시간 측정 (리스트 컴프리헨션 사용)
-#     add_start_time = time.time()
-#     result = [list_a[i] + list_b[i] for i in range(N)]
-#     add_end_time = time.time()
-
-#     return {
-#         "array_creation_time": end_creation_time - start_creation_time,
-#         "addition_time": add_end_time - add_start_time
-#         }
-
-# 상수
-N = 10**5
 
 @app.get("/add-large-arrays-pandas")
 def add_large_arrays():
