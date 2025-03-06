@@ -14,15 +14,25 @@ services:
     restart: always
     links:
       - controller
-        
   lb:
-    image: nginxproxy/nginx-proxy # https://github.com/nginx-proxy/nginx-proxy
+    image: nginx:1.27.4
     ports:
       - "8949:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
     depends_on:
-      - api
+        - api
+    volumes:
+      - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./conf/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf 
+        
+        
+  # lb:
+  #   image: nginxproxy/nginx-proxy # https://github.com/nginx-proxy/nginx-proxy
+  #   ports:
+  #     - "8949:80"
+  #   volumes:
+  #     - /var/run/docker.sock:/tmp/docker.sock:ro
+  #   depends_on:
+  #     - api
   
   api:
     build:
@@ -33,7 +43,7 @@ services:
     expose:
       - "80"
     environment:
-      - VIRTUAL_HOST=172.17.0.1,localhost,127.0.0.1,172.18.0.4
+      - VIRTUAL_HOST=172.17.0.1,localhost,127.0.0.1
       - VIRTUAL_PORT=80
     volumes:
       - ./main.py:/code/main.py
